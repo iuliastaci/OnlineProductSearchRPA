@@ -1,0 +1,7 @@
+﻿{
+  "WebsiteURL": "https://www.example.com",
+  "EmailSender": "robot@example.com",
+  "EmailRecipient": "user@example.com",
+  "ExcelInputPath": "Data/input.xlsx",
+  "ExcelOutputPath": "Data/output.xlsx"
+}
