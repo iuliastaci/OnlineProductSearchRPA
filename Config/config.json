@@ -1,7 +1,11 @@
 ﻿{
-  "WebsiteURL": "https://www.example.com",
-  "EmailSender": "robot@example.com",
-  "EmailRecipient": "user@example.com",
-  "ExcelInputPath": "Data/input.xlsx",
-  "ExcelOutputPath": "Data/output.xlsx"
+	"WebsiteURL": "https://answear.ro/",
+	"EmailSettings": {
+		"Recipient": "ana-iulia.staci@s.unibuc.ro",
+		"From": "rpaproject2025@outlook.com",
+		"Subject": "Raport automat produse cautate",
+		"Body": "Raportul atasat privind produsele cautate a fost generat automat."
+	},
+	"ExcelInputPath": "Data/input.xlsx",
+	"ExcelOutputPath": "Data/output.xlsx"
 }
