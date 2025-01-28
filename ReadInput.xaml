@@ -126,16 +126,8 @@
       <Variable x:TypeArguments="sd:DataTable" Name="Products" />
       <Variable x:TypeArguments="x:String" Name="ExcelInputPath" />
       <Variable x:TypeArguments="x:String" Name="dtAsText" />
-      <Variable x:TypeArguments="s:String[]" Name="allowedColors">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;rosu&quot;, &quot;galben&quot;, &quot;verde&quot;, &quot;alb&quot;, &quot;negru&quot;, &quot;roz&quot;, &quot;portocaliu&quot;, &quot;albastru&quot;, &quot;maro&quot;, &quot;gri&quot;, &quot;bej&quot;, &quot;bleumarin&quot;, &quot;violet&quot;, &quot;burgundia&quot;, &quot;turcoaz&quot;, &quot;argintiu&quot;, &quot;aur&quot;, &quot;multicolor&quot;, &quot;crem&quot;}" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="s:String[]" Name="allowedGenders">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;femei&quot;, &quot;barbati&quot;}" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;rosu&quot;, &quot;galben&quot;, &quot;verde&quot;, &quot;alb&quot;, &quot;negru&quot;, &quot;roz&quot;, &quot;portocaliu&quot;, &quot;albastru&quot;, &quot;maro&quot;, &quot;gri&quot;, &quot;bej&quot;, &quot;bleumarin&quot;, &quot;violet&quot;, &quot;burgundia&quot;, &quot;turcoaz&quot;, &quot;argintiu&quot;, &quot;aur&quot;, &quot;multicolor&quot;, &quot;crem&quot;}]" Name="allowedColors" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;femei&quot;, &quot;barbati&quot;}]" Name="allowedGenders" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -173,7 +165,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,194" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[ExcelInputFile.Sheet(&quot;Products&quot;).Range(&quot;A1:E6&quot;)]" SaveTo="[dtProducts]" />
+                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,194" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[ExcelInputFile.Sheet(&quot;Products&quot;).Range(&quot;A1:E3&quot;)]" SaveTo="[dtProducts]" />
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
