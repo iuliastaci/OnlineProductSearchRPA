@@ -7,5 +7,5 @@
 		"Body": "Raportul atasat privind produsele cautate a fost generat automat."
 	},
 	"ExcelInputPath": "Data/input.xlsx",
-	"ExcelOutputPath": "Data/output.xlsx"
+	"ExcelOutputPath": "C:/Users/Iulia/Documents/output.xlsx"
 }

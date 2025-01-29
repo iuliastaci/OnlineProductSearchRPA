@@ -116,7 +116,7 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1077,1982" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1077,2159" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="ConfigData" />
       <Variable x:TypeArguments="x:String" Name="EmailRecipient" />
@@ -249,10 +249,19 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessResults - Invoke Workflow File (ProcessResults.xaml)" sap:VirtualizedContainerService.HintSize="418,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ProcessResults.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessResults - Invoke Workflow File (ProcessResults.xaml)" sap:VirtualizedContainerService.HintSize="418,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ProcessResults.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="inResults">[Results]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="OutputFile">[ExcelOutputPath]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail - Invoke Workflow File (SendEmail.xaml)" sap:VirtualizedContainerService.HintSize="418,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SendEmail.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="emailFrom">[EmailFrom]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="emailSubject">[EmailSubject]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="emailBody">[EmailBody]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="emailTo">[EmailRecipient]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="excelOutputPath">[ExcelOutputPath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
